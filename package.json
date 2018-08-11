@@ -1,0 +1,17 @@
+{
+  "name": "water-injector-calculator",
+  "version": "1.0.0",
+  "description": "A javascript tool for estimating correct usage of a high pressure water injector.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Dan Finlay <dan@danfinlay.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  }
+}
