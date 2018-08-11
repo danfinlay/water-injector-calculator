@@ -29,17 +29,6 @@ test(`Test defaults`, (t) => {
   t.end()
 })
 
-test('hoseSpeed', (t) => {
-  const gallons = 100 // gallons
-  const speed = 10 // gallons per minute
-
-  const calc = new Calc()
-
-  const result = calc.timeToEmitGallons({ gallons, speed })
-  t.equal(result, 10, 'should take 10 minutes to soak')
-  t.end()
-})
-
 test('timeToSoak', (t) => {
   const area = 100 // sq feet
   const depth = 3 // feet

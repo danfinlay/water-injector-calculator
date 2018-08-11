@@ -15,20 +15,9 @@ class InjectionCalculator {
     return soilVolumeToSoak * waterPerSquareFootInch * fieldCapacity
   }
 
-  /*
-   * The amount of time required for a given hose to emit a number of gallons.
-   * @returns {Number} minutes
-   */
-  timeToEmitGallons ({ gallons = 0, speed = 8 } = {}) {
-    return gallons / speed
-  }
-
   timeToSoak ({ area = 0, depth = 3, fieldCapacity = 1, hoseSpeed = 8 } = {}) {
     const waterNeeded = this.waterNeeded({ area, depth, fieldCapacity })
-    return this.timeToEmitGallons({
-      gallons: waterNeeded,
-      speed: hoseSpeed,
-    })
+    return waterNeeded / hoseSpeed
   }
 }
 
