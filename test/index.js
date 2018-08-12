@@ -45,3 +45,15 @@ test('timeToSoak', (t) => {
   t.end()
 })
 
+test('timeToSoak a half acre', (t) => {
+  const sqFeetPerAcre = 43560
+  const calc = new Calc()
+  const result = calc.timeToSoak({
+    area: sqFeetPerAcre / 2,
+  })
+
+  t.ok(result, `Should water for ${result} minutes.`)
+  t.ok(result, `Should water for ${ (result / 60).toFixed(1) } hours.`)
+  t.end()
+})
+
